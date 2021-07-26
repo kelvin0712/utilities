@@ -4,10 +4,7 @@
  */
 
 function getObjectStringTag(value) {
-    return Object.prototype.toString.call(value)
+  return Object.prototype.toString.call(value);
 }
 
-export default getObjectStringTag
-
-
-
+export default getObjectStringTag;

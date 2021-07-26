@@ -1,3 +1,5 @@
+import toInteger from "./toInteger.mjs";
+
 /**
  * Creates an array of elements split into groups the length of `size`.
  * If `array` can't be split evenly, the final chunk will be the remaining
@@ -16,7 +18,7 @@
  */
 
 function chunk(array, size = 1) {
-  if (!array.length || parseInt(size) < 1) {
+  if (!array.length || toInteger(size) < 1) {
     return [];
   }
 
@@ -31,3 +33,5 @@ function chunk(array, size = 1) {
 
   return newChunkedArray;
 }
+
+export default chunk;

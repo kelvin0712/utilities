@@ -16,3 +16,5 @@ function compact(array) {
 
   return array.filter((element) => !!element);
 }
+
+export default compact;
