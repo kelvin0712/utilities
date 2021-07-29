@@ -5,7 +5,7 @@
  * determined by the first array.
  *
  * @param {Array} array The array to inspect.
- * @param {Array} [values] The values to exclude.
+ * @param {Arrays} [values] The values to exclude.
  * @returns {Array} Returns the new array of filtered values.
  * @example
  *
@@ -13,16 +13,18 @@
  * // => [1]
  */
 
-function difference(array, arrayToCompare = []) {
+function difference(array, ...arraysToCompare) {
   if (!Array.isArray(array) || !array.length) {
     return [];
   }
 
-  if (!Array.isArray(arrayToCompare) || !arrayToCompare.length) {
+  if (!arraysToCompare.length) {
     return array;
   }
 
-  return array.filter((element) => !arrayToCompare.includes(element));
+  const flatArrayToCompare = arraysToCompare.flat(Infinity);
+
+  return array.filter((element) => !flatArrayToCompare.includes(element));
 }
 
 export default difference;
