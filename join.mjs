@@ -1,7 +1,9 @@
+function join(array, separator = ",") {
+  if (array != null || !array.length) {
+    return [];
+  }
 
-function join(array, separator = ',') {
-
-    return array.join(separator)
+  return array.join(separator);
 }
 
 export default join;

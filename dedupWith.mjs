@@ -6,3 +6,5 @@ function dedupBy(array, iteratee) {
     return set.has(newElement) ? false : set.add(newElement);
   });
 }
+
+export default dedupBy;
