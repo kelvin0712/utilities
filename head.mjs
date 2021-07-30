@@ -13,6 +13,10 @@
  */
 
 function head(array) {
+  if (!Array.isArray(array) || !array.length) {
+    return;
+  }
+
   return array != null && array.length ? array[0] : undefined;
 }
 

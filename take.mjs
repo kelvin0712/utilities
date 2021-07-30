@@ -1,3 +1,5 @@
+import toInteger from "./toInteger.mjs";
+
 /**
  * Creates a slice of `array` with `n` elements taken from the beginning.
  *
@@ -17,7 +19,11 @@
  */
 
 function take(array, number = 1) {
-  return array.slice(0, number);
+  if (!Array.isArray(array) || !array.length) {
+    return [];
+  }
+
+  return array.slice(0, toInteger(number));
 }
 
 export default take;

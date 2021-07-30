@@ -1,4 +1,8 @@
 function dedupBy(array, iteratee) {
+  if (!Array.isArray(array) || !array.length) {
+    return [];
+  }
+
   const set = new Set();
 
   return array.filter((element) => {

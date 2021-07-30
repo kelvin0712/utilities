@@ -16,7 +16,7 @@
  */
 
 function pull(array, ...values) {
-  if (array == null && values == null) {
+  if (!Array.isArray(array) || !array.length) {
     return;
   }
 

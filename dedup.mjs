@@ -13,7 +13,7 @@
  */
 
 function dedup(array) {
-  if (array == null && array.length === 0) {
+  if (!Array.isArray(array) || !array.length) {
     return [];
   }
 

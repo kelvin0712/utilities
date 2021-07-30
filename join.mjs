@@ -1,5 +1,5 @@
 function join(array, separator = ",") {
-  if (array != null || !array.length) {
+  if (!Array.isArray(array) || !array.length) {
     return [];
   }
 

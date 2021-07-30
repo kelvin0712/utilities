@@ -19,6 +19,10 @@ import toInteger from "./toInteger.mjs";
  */
 
 function takeFromRight(array, number = 1) {
+  if (!Array.isArray(array) || !array.length) {
+    return [];
+  }
+
   number = array.length - toInteger(number);
 
   return array.slice(number < 0 ? 0 : number, array.length);

@@ -14,7 +14,7 @@ import isIndex from "./private/isIndex.mjs";
  */
 
 function nth(array, index = 0) {
-  if (array == null) {
+  if (!Array.isArray(array) || !array.length) {
     return;
   }
 

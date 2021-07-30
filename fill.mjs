@@ -20,6 +20,10 @@
  */
 
 function fill(array, value, start = 0, end = array.length) {
+  if (!Array.isArray(array) || !array.length) {
+    return [];
+  }
+
   for (let i = start; i < end; i++) {
     array[i] = value;
   }

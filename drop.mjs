@@ -19,7 +19,7 @@ import toInteger from "./toInteger.mjs";
  */
 
 function drop(array, number = 1) {
-  if (!Array.isArray(array)) {
+  if (!Array.isArray(array) || !array.length) {
     return [];
   }
 

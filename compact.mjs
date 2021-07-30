@@ -10,7 +10,7 @@
  */
 
 function compact(array) {
-  if (typeof array !== "array" || !array.length) {
+  if (!Array.isArray(array) || !array.length) {
     return [];
   }
 
